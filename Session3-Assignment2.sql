@@ -9,15 +9,15 @@ GROUP BY pcr.product_id
 HAVING COUNT(pcr.product_id) > 1;
 
 -- Display Count of products as per below price range:
-SELECT '0-1000', COUNT(*) AS count 
+SELECT '0-1000', COUNT(id) AS count 
 FROM  product
 WHERE price BETWEEN 0 AND 1000
 UNION
-SELECT '1000-10000', COUNT(*) AS count 
+SELECT '1000-10000', COUNT(id) AS count 
 FROM  product
 WHERE price BETWEEN 1000 AND 10000
 UNION
-SELECT '10000-50000', COUNT(*) AS count 
+SELECT '10000-50000', COUNT(id) AS count 
 FROM  product
 WHERE price BETWEEN 10000 AND 50000;
 
